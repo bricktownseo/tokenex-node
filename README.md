@@ -2,7 +2,7 @@
 
 ## Documentation
 
-See the [TokenEX API docs](https://docs.tokenex.com/).
+See the [TokenEX API docs](http://docs.tokenex.com/#tokenex-api).
 
 ## Installation
 
@@ -33,14 +33,14 @@ Install the package with:
 
 ## Token Services
 
-  These API are used to manage token life cycle. You can do things that create, encrypt, validate, decrypt, and delete tokens.
+  This portion of the API is used to manage the entire token life cycle. You can do things that create and delete tokens as well as detokenize.
 
 ### Tokenize()
 
   Tokenize is the method that you would call in order to tokenize a given data set. You will need to provide your TokenEx ID and authorized API Key, the data you wish to tokenize and your desired token scheme.
 
   ```js
-    tokenex.token.tokenize("5454545454545454",1, function(err, success){
+    tokenex.token.tokenize("5454545454545454","1", function(err, success){
       if(err){
         console.log("Error", err.message, err.code);
       }
@@ -71,6 +71,7 @@ Install the package with:
       }
       console.log("sucess",success);
     });
+
     /*
     success {
       "Error":"",
@@ -88,7 +89,8 @@ Install the package with:
 
   ```js
     //"Token":"545454587415454"
-    tokenex.token.validate("545454587415454","1", function(err, success){
+
+    tokenex.token.validate("545454587415454", function(err, success){
       if(err){
         console.log("Error", err.message, err.code);
       }
@@ -104,5 +106,50 @@ Install the package with:
     }
     */
   ```
+
 ### Detokenize()
+
+  Allows you to retrieve the sensitive data associated with a given token.
+
+  ```js
+    //"Token":"545454587415454",
+
+    tokenex.token.detokenize("545454587415454", function(err, success){
+      if(err){
+        console.log("Error", err.message, err.code);
+      }
+      console.log("sucess",success);
+    });
+
+    /*
+    success {
+      "Error":"",
+      "ReferenceNumber":"15102913382030662954",
+      "Success":true,
+      "Value":"5454545454545454"
+    }
+    */
+  ```
+
 ### Delete()
+
+  Deletes the sensitive data and token from your token vault.
+
+  ```js
+    //"Token":"545454587415454"
+
+    tokenex.token.delete("545454587415454", function(err, success){
+      if(err){
+        console.log("Error", err.message, err.code);
+      }
+      console.log("sucess",success);
+    });
+
+    /*
+    success {
+      "Error":"",
+      "ReferenceNumber":"15102913382030662954",
+      "Success":true,
+    }
+    */
+  ```
