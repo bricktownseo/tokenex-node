@@ -1,0 +1,26 @@
+{
+  "name": "tokenex",
+  "version": "0.0.1",
+  "description": "TokenEX Node.js library for API",
+  "main": "lib/tokenex.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bricktownseo/tokenex-node.git"
+  },
+  "keywords": [
+    "tokenex",
+    "payment processing",
+    "credit cards",
+    "api"
+  ],
+  "author": "TokenEX <support@tokenex.com> (https://tokenex.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bricktownseo/tokenex-node/issues"
+  },
+  "homepage": "https://github.com/bricktownseo/tokenex-node#readme",
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  }
+}
