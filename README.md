@@ -12,13 +12,13 @@ Install the package with:
 
 ## Table of Contents
 
-*[Initialization](#initialization)
-*[Token Services](#token-services)
-  *[Tokenize()](#tokenize)
-  *[TokenizeEncrypted()](#tokenizeEncrypted)
-  *[Validate()](#validate)
-  *[Detokenize()](#detokenize)
-  *[Delete()](#delete)
+* [Initialization](#initialization)
+* [Token Services](#token-services)
+  * [Tokenize()](#tokenize)
+  * [TokenizeEncrypted()](#tokenizeencrypted)
+  * [Validate()](#validate)
+  * [Detokenize()](#detokenize)
+  * [Delete()](#delete)
 
 ## Initialization
 
