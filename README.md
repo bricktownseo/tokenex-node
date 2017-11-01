@@ -39,18 +39,41 @@ Install the package with:
 
   Tokenize is the method that you would call in order to tokenize a given data set. You will need to provide your TokenEx ID and authorized API Key, the data you wish to tokenize and your desired token scheme.
 
-  ```js
-  tokenex.token.tokenize("5454545454545454",1, function(err, success){
-    if(err){
-      console.log("Error", err.message, err.code);
-    }
-    console.log("success",success);
-  });
+    ```js
+    tokenex.token.tokenize("5454545454545454",1, function(err, success){
+      if(err){
+        console.log("Error", err.message, err.code);
+      }
+      console.log("success",success);
+    });
 
-  //
-  ```
+    /*
+    success {
+      "Error":"",
+      "ReferenceNumber":"15102913382030662954",
+      "Success":true,
+      "Token":"545454587415454"
+    }
+    */
+    ```
 
 ### TokenizeEncrypted()
+
+  TokenizeFromEncryptedValue is the method that you would call in order to tokenize a given encrypted value that was previously encrypted through Browser Based Encryption. You will need to provide your TokenEx ID and authorized API Key, the data you wish to tokenize and your desired token scheme.
+
+    ```js
+    //"EcryptedData":"dGhpcyBpcyBzb21lIHJlYWxseSBsb25nIGNpcGhlciB0ZXh0IGZyb20gb3VyIFJTQSBsaWJyYXJ5",
+    //"TokenScheme":1
+
+    tokenex.token.tokenizeEncrypted("dGhpcyBpcyBzb21lIHJlYWxseSBsb25nIGNpcGhlciB0ZXh0IGZyb20gb3VyIFJTQSBsaWJyYXJ5","1", function(err, success){
+      if(err){
+        console.log("Error", err.message, err.code);
+      }
+      console.log("sucess",success);
+    });
+    ```
+
+
 ### Validate()
 ### Detokenize()
 ### Delete()
