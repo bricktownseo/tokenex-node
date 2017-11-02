@@ -47,7 +47,7 @@ Install the package with:
 
   Tokenize is the method that you would call in order to tokenize a given data set. You will need to provide your TokenEx ID and authorized API Key, the data you wish to tokenize and your desired token scheme.
 
-  "TokenScheme"(Enum):tokenex.schemes.sixTOKENfour [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
+  TokenScheme (Enum): tokenex.schemes.sixTOKENfour [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
   ```js
     //  "Data":"5454545454545454",
     //  "TokenScheme": tokenex.schemes.sixTOKENfour(1)
@@ -73,8 +73,8 @@ Install the package with:
 
   TokenizeFromEncryptedValue is the method that you would call in order to tokenize a given encrypted value that was previously encrypted through Browser Based Encryption. You will need to provide your TokenEx ID and authorized API Key, the data you wish to tokenize and your desired token scheme.
 
-  "EcryptedData"(string):The encrypted value of the sensitive data you wish to tokenize.
-  "TokenScheme"(Enum):tokenex.schemes.sixTOKENfour [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
+  EcryptedData (string): The encrypted value of the sensitive data you wish to tokenize.
+  TokenScheme (Enum): tokenex.schemes.sixTOKENfour [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
   ```js
     //"EcryptedData":"dGhpcyBpcyBzb21lIHJlYWxseSBsb25nIGNpcGhlciB0ZXh0IGZyb20gb3VyIFJTQSBsaWJyYXJ5",
     //"TokenScheme":tokenex.schemes.sixTOKENfour (1)
@@ -177,11 +177,11 @@ Install the package with:
 
   Tokenizes data from a P2PE device.
 
-  "EncryptedTrack" (string):The track value from the devices payload (location based on specific device)
-  "EncryptionProfile" (string):The encryption profile defined by TokenEx associated with keys loaded in the P2PE device. For test devices, this value will be ‘test’
-  "KSN" (string):The KSN value from the devices payload (location based on specific device)
-  "RequestFormat" (Enum):Format of the data (e.g. Hex(xml: Hex, json: 2), Base64(xml:Base64,json: 1))
-  "TokenScheme" (Enum):tokenex.schemes.GUID  [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
+  EncryptedTrack (string): The track value from the devices payload (location based on specific device)
+  EncryptionProfile (string): The encryption profile defined by TokenEx associated with keys loaded in the P2PE device. For test devices, this value will be ‘test’
+  KSN (string): The KSN value from the devices payload (location based on specific device)
+  RequestFormat (Enum): Format of the data (e.g. Hex(xml: Hex, json: 2), Base64(xml:Base64,json: 1))
+  TokenScheme (Enum): tokenex.schemes.GUID  [TokenScheme](http://docs.tokenex.com/#appendix-token-schemes)
   ```js
     //"EncryptedTrack":"0x15489",
     //"EncryptionProfile":"test",
@@ -219,7 +219,7 @@ Install the package with:
 
   ```js
     /*
-    TransactionType: This the type of transaction you wish to conduct. This is where you will stipulate Authorize (1), Capture (2), Purchase (3), Refund (4), Void (5), Reverse (6).
+    "TransactionType": This the type of transaction you wish to conduct. This is where you will stipulate Authorize (1), Capture (2), Purchase (3), Refund (4), Void (5), Reverse (6).
     */
 
     tokenex.payment.processTransaction('1',function(err, success){
@@ -265,12 +265,12 @@ Install the package with:
 
   The complete list of currently supported gateways, and details of input parameters for each of those gateways can be found in [Gateway Parameters](http://docs.tokenex.com/#appendix-gateway-parameters).
 
-  "TokenScheme" (Enum): See [Token Schemes](http://docs.tokenex.com/#appendix-token-schemes)
+  TokenScheme (Enum): See [Token Schemes](http://docs.tokenex.com/#appendix-token-schemes)
   ```js
     /*
-    TransactionType: This the type of transaction you wish to conduct. This is where you will stipulate Authorize (1), Capture (2), Purchase (3), Refund (4), Void (5), Reverse (6).
-    Encrypted (boolean): Indicator if the value supplied is encrypted. If true, value is encrypted.
-    TokenScheme (Enum): 1
+    "TransactionType": This the type of transaction you wish to conduct. This is where you will stipulate Authorize (1), Capture (2), Purchase (3), Refund (4), Void (5), Reverse (6).
+    "Encrypted" (boolean): Indicator if the value supplied is encrypted. If true, value is encrypted.
+    "TokenScheme" (Enum): 1
     */
 
     tokenex.payment.processTransactionAndTokenize('1', "true", tokenex.schemes.sixTOKENfour, function(err, success){
@@ -341,9 +341,9 @@ Install the package with:
 
   Generate a Kount hash value that can be sent directly to Kount for fraud validation of a given PAN and return a TokenEx token.
 
-  Data (string):The data you wish to obtain a hash value for and tokenize.
-  Encrypted (boolean):Indicator if the value supplied is encrypted. If true, value is encrypted.
-  TokenScheme (Enum):See [Token Schemes](http://docs.tokenex.com/#appendix-token-schemes)
+  Data (string): The data you wish to obtain a hash value for and tokenize.
+  Encrypted (boolean): Indicator if the value supplied is encrypted. If true, value is encrypted.
+  TokenScheme (Enum): See [Token Schemes](http://docs.tokenex.com/#appendix-token-schemes)
 
   ```js
     //"Data":"WhatYouWantToTokenize",
