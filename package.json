@@ -1,6 +1,6 @@
 {
   "name": "tokenex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TokenEX Node.js library for API",
   "main": "lib/tokenex.js",
   "repository": {
