@@ -11,6 +11,9 @@
     "tokenex",
     "payment processing",
     "credit cards",
+    "phi",
+    "pii",
+    "tokenization",
     "api"
   ],
   "author": "TokenEX <support@tokenex.com> (https://tokenex.com)",
@@ -18,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/bricktownseo/tokenex-node/issues"
   },
-  "homepage": "https://github.com/bricktownseo/tokenex-node#readme",
+  "homepage": "https://tokenex.com",
   "dependencies": {
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
