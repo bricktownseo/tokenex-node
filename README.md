@@ -12,6 +12,7 @@ Install the package with:
 
 ## Table of Contents
 
+* [Installation](#installation)
 * [Initialization](#initialization)
 * [Token Services](#token-services)
   * [tokenize()](#tokenize)
@@ -30,13 +31,21 @@ Install the package with:
 * [Reporting Services](#reporting-services)
   * [getUsageStats()](#getusagestats)
 
+## Installation
+
+  ```terminal
+  npm install -i tokenex
+  ```
+  
+  Review the NPM Module at (https://www.npmjs.com/package/tokenex)
+
 ## Initialization
 
   ```js
   //  "APIKey":"YourAPIKey",
   //  "TokenExID":"YourtokenExID",
 
-  var tokenex = require('./lib/tokenex')("YourAPIKey","YourtokenExID");
+  var tokenex = require('tokenex')("YourAPIKey","YourtokenExID");
   ```
 
 ## Token Services
