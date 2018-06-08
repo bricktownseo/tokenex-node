@@ -2,7 +2,7 @@
 
 ## Documentation
 
-See the [TokenEX API docs](http://docs.tokenex.com/#tokenex-api).
+See the [TokenEX Tokenization API docs](http://docs.tokenex.com/#tokenex-api).
 
 ## Installation
 
